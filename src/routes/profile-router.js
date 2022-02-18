@@ -8,8 +8,6 @@ const authCheck = (req,res,next)=>{
         next();
     }
 }
-
-
 router.get("/",authCheck,(req,res)=>{
     res.render('profile',{user:req.user})
 })
